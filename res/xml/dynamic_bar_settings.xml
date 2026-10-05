@@ -33,6 +33,15 @@
             android:defaultValue="false"
             android:dependency="ax_dynamic_bar_keyguard_enabled" />
 
+        <lineageos.preference.SecureSettingListPreference
+            android:key="ax_dynamic_bar_keyguard_battery_chip_mode"
+            android:title="@string/dynamic_bar_keyguard_battery_chip"
+            android:summary="%s"
+            android:entries="@array/dynamic_bar_battery_chip_entries"
+            android:entryValues="@array/dynamic_bar_battery_chip_values"
+            android:defaultValue="1"
+            android:dependency="ax_dynamic_bar_keyguard_enabled" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
