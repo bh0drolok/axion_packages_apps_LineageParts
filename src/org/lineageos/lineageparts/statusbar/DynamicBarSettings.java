@@ -48,7 +48,7 @@ public class DynamicBarSettings extends SettingsPreferenceFragment {
         new EventToggle("charging", R.string.dynamic_bar_event_charging, R.string.dynamic_bar_event_charging_summary),
         new EventToggle("bluetooth", R.string.dynamic_bar_event_bluetooth, R.string.dynamic_bar_event_bluetooth_summary),
         new EventToggle("hotspot", R.string.dynamic_bar_event_hotspot, R.string.dynamic_bar_event_hotspot_summary),
-        new EventToggle("ringer_mode", R.string.dynamic_bar_event_ringer, R.string.dynamic_bar_event_ringer_summary),
+        new EventToggle("ringer", R.string.dynamic_bar_event_ringer, R.string.dynamic_bar_event_ringer_summary),
         new EventToggle("vpn", R.string.dynamic_bar_event_vpn, R.string.dynamic_bar_event_vpn_summary),
         new EventToggle("clipboard", R.string.dynamic_bar_event_clipboard, R.string.dynamic_bar_event_clipboard_summary),
         new EventToggle("torch", R.string.dynamic_bar_event_torch, R.string.dynamic_bar_event_torch_summary),
