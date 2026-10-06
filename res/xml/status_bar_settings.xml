@@ -131,4 +131,35 @@
             android:defaultValue="true" />
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/status_bar_volume_slider_title">
+
+        <lineageos.preference.LineageSecureSettingListPreference
+            android:key="qs_show_volume_slider"
+            android:title="@string/status_bar_volume_slider_title"
+            android:dialogTitle="@string/status_bar_volume_slider_title"
+            android:entries="@array/status_bar_volume_slider_entries"
+            android:entryValues="@array/status_bar_volume_slider_values"
+            android:defaultValue="1"
+            app:useSimpleSummaryProvider="true" />
+
+        <lineageos.preference.LineageSecureSettingListPreference
+            android:key="qs_volume_slider_position"
+            android:title="@string/status_bar_volume_slider_position_title"
+            android:dependency="qs_show_volume_slider"
+            android:entries="@array/status_bar_volume_slider_position_entries"
+            android:entryValues="@array/status_bar_volume_slider_position_values"
+            android:defaultValue="0"
+            app:useSimpleSummaryProvider="true" />
+
+        <lineageos.preference.LineageSecureSettingListPreference
+            android:key="qs_media_position"
+            android:title="@string/status_bar_media_position_title"
+            android:dialogTitle="@string/status_bar_media_position_title"
+            android:entries="@array/status_bar_media_position_entries"
+            android:entryValues="@array/status_bar_media_position_values"
+            android:defaultValue="0"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
 </PreferenceScreen>

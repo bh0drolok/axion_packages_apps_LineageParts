@@ -571,6 +571,15 @@
     <string name="status_bar_brightness_slider_position_top">Top</string>
     <string name="status_bar_brightness_slider_position_bottom">Bottom</string>
 
+    <!-- Quick Settings - Sliders & Media -->
+    <string name="status_bar_sliders_category">Quick Settings Sliders</string>
+    <string name="status_bar_volume_slider_title">Volume slider</string>
+    <string name="status_bar_volume_slider_summary">Adjust media volume directly from Quick Settings</string>
+    <string name="status_bar_volume_slider_position_title">Volume slider position</string>
+    <string name="status_bar_media_position_title">Media player position</string>
+    <string name="status_bar_media_position_top">Top (above tiles)</string>
+    <string name="status_bar_media_position_bottom">Bottom (below tiles)</string>
+
     <!-- Status bar - Network Traffic -->
     <string name="network_traffic_settings_title">Network traffic monitor</string>
     <string name="network_traffic_settings_summary">Show current network traffic levels in the status bar</string>
