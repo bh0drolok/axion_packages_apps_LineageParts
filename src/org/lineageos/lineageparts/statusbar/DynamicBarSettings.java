@@ -9,6 +9,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.UserHandle;
 import android.provider.Settings;
+import androidx.preference.ListPreference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.SwitchPreferenceCompat;
 
@@ -22,6 +23,8 @@ import java.util.Set;
 public class DynamicBarSettings extends SettingsPreferenceFragment {
 
     private static final String SETTINGS_KEY_EVENTS = "ax_dynamic_bar_events";
+    private static final String KEY_BATTERY_CHIP_MODE =
+            "ax_dynamic_bar_keyguard_battery_chip_mode";
 
     private static class EventToggle {
         final String typeId;
@@ -64,6 +67,22 @@ public class DynamicBarSettings extends SettingsPreferenceFragment {
 
         loadDisabledEvents();
         setupEventToggles();
+        setupBatteryChipMode();
+    }
+
+    private void setupBatteryChipMode() {
+        ListPreference pref = findPreference(KEY_BATTERY_CHIP_MODE);
+        if (pref == null) return;
+        // Stored in Settings.Secure (not LineageSettings) because SystemUI reads it from there.
+        int current = Settings.Secure.getIntForUser(requireContext().getContentResolver(),
+                KEY_BATTERY_CHIP_MODE, 1, UserHandle.USER_CURRENT);
+        pref.setValue(String.valueOf(current));
+        pref.setOnPreferenceChangeListener((preference, newValue) -> {
+            Settings.Secure.putIntForUser(requireContext().getContentResolver(),
+                    KEY_BATTERY_CHIP_MODE, Integer.parseInt((String) newValue),
+                    UserHandle.USER_CURRENT);
+            return true;
+        });
     }
 
     private void loadDisabledEvents() {
