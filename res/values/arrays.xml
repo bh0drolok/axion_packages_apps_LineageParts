@@ -335,11 +335,13 @@
     <string-array name="status_bar_media_position_entries" translatable="false">
         <item>@string/status_bar_media_position_top</item>
         <item>@string/status_bar_media_position_bottom</item>
+        <item>@string/status_bar_media_position_hide</item>
     </string-array>
 
     <string-array name="status_bar_media_position_values" translatable="false">
         <item>0</item>
         <item>1</item>
+        <item>2</item>
     </string-array>
 
     <!-- Quick pulldown -->

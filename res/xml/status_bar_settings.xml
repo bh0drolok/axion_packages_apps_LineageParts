@@ -151,6 +151,10 @@
             android:entryValues="@array/status_bar_volume_slider_position_values"
             android:defaultValue="0"
             app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/status_bar_media_title">
 
         <lineageos.preference.LineageSecureSettingListPreference
             android:key="qs_media_position"
@@ -161,5 +165,4 @@
             android:defaultValue="0"
             app:useSimpleSummaryProvider="true" />
     </PreferenceCategory>
-
 </PreferenceScreen>
